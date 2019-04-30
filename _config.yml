@@ -1,0 +1,20 @@
+markdown: kramdown
+theme: kde-jekyll-theme
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+collections:
+  changelogs:
+    output: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
