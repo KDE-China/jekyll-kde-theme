@@ -38,6 +38,14 @@ css-include: /css/main.css
 ```
 * Components (at least one): if your application contains multiple component (e.g Kontact) create a new file for each component (e.g KMail &rarr; kmail.md). Otherwise create only one component (e.g konsole.md) in \_components.
 
+## Build example
+
+```bash
+cd example/simple
+bundle install --path vendor/bundle
+bundle exec jekyll serve
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on the KDE Gitlab at https://invent.kde.org/ognarb/kde-jekyll-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [KDE code of conduct](https://kde.org/code-of-conduct/).
