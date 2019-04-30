@@ -1,0 +1,33 @@
+# Site settings
+title: Konsole
+email: konsole-devel@kde.org
+git: https://cgit.kde.org/konsole.git/
+handbook: https://docs.kde.org/trunk5/en/applications/konsole/index.html
+forum: http://forum.kde.org/viewforum.php?f=227
+description: >
+    Konsole: the KDE Terminal Emulator
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://konsole.kde.org"
+twitter_username: kde_community
+github_username:  kde
+
+# Build settings
+markdown: kramdown
+theme: kde-jekyll-theme
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+collections:
+  changelogs:
+    output: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
