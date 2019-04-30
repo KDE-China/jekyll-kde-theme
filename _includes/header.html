@@ -1,0 +1,36 @@
+<header class="header clearfix">
+    <nav id="kHeaderNav" class="navbar navbar-expand-md container-fluid">
+        <a class="navbar-brand {% if page.url == '/' %}navbar-brand-active{% endif %}" href="/index.html" id="KontactGlobalLogo">
+            <img src="/assets/img/app_icon.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#kMainNavbar" aria-controls="kMainNavbar"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="KMadeByKDE">
+            <a class="navbar-brand" id="KGlobalLogo" href="https://www.kde.org"></a>
+            <span>Made by KDE</span>
+        </div>
+        <div class="collapse navbar-collapse" id="kMainNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/' %}active{% endif %}"
+                       href="/" aria-haspopup="true" aria-expanded="false">Konsole</a>
+                </li>
+                {% assign sorted = site.pages | sort: "sorted" %}
+                {% for nav in sorted %}
+                  {% if nav.title and (nav.title != "Changelog" or (site.changelogs | size) != 0) %}
+                  <li class="nav-item">
+                      <a class="nav-link {% if page.url == nav.url %}active{% endif %}" href="{{ nav.url }}">{{ nav.title }}</a>
+                  </li>
+                  {% endif %}
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.kde.org/donate">Donate</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+

@@ -1,0 +1,541 @@
+@import 'aetherCore';
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+    line-height: 2em;
+}
+
+h1, h2, h3 {
+    line-height: 1.5em;
+}
+
+ul > li {
+    line-height: 2em;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    display: block;
+    z-index: 4;
+    background-color: rgb(255, 255, 255);
+}
+
+.header > * {
+    margin: auto;
+    max-width: 1140px;
+}
+
+.header::after {
+    content: "";
+    clear: both;
+    display: block;
+    background-size: 100% 5px;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAFCAYAAACzSkmrAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACkSURBVDiN7dExDsIwDEbh9we1soXE6eCEbJyInQNwgKgxQ9WWFrIShr7ZkewvYm/V5fbwLj8NoKTec0lGzp66ZAzJS8jQ4EKG5KLY+FIeYBAOMoRHyFC4YJwpcqVixGYWnHHG1ebs700YHxBAHWM6DqoYHxBvswvGEegbnL1q/pAqxgQB1DE2EEAdY4aABeMEHH57+n+m8/UerZfYW0qtF9hb9wI2bU03vw4M8QAAAABJRU5ErkJggg==");
+    z-index: -1;
+}
+
+#kHeaderNav {
+    padding: 0;
+    position: relative;
+
+    button {
+        outline: 0;
+    }
+
+    .navbar-toggler {
+        position: relative;
+    }
+
+    .navbar-toggler:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 42px;
+        margin-left: -21px;
+        content: "=";
+        color: #4d4d4d;
+        font-family: "glyph";
+        font-size: 22px;
+        font-weight: normal;
+        text-indent: 0px;
+        text-align: center;
+        line-height: 50px;
+        display: inline-block;
+        text-decoration: none !important;
+    }
+
+    a.nav-link,
+    a.dropdown-item {
+        color: #334545;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+    }
+
+    a:hover {
+        color: #3daefd;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+    }
+
+    a.active:hover,
+    .dropdown-menu.show a.nav-link {
+        color: #334545;
+    }
+
+    a:active,
+    .active,
+    a.dropdown-item:active,
+    .navbar-brand-active,
+    .dropdown-toggle.show a.nav-link {
+        background: #54a3d8;
+        color: #FFF;
+    }
+
+    .dropdown-toggle.show {
+        position: relative;
+    }
+
+    .dropdown-toggle::after {
+        content: "" !important;
+        display: none;
+    }
+
+    .dropdown-toggle .nav-link::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: .5em;
+        vertical-align: .255em;
+        content: "";
+        border-top: .3em solid;
+        border-right: .3em solid transparent;
+        border-bottom: 0;
+        border-left: .3em solid transparent;
+    }
+
+    .dropdown-menu {
+        border-radius: 0px;
+        border: 1px solid #54a3d8;
+        border-top: none;
+        margin: 0;
+        padding: 0;
+        background-color: initial;
+
+        @media(min-width: 575px) {
+            background-color: #fff;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-size 0.4s;
+            position: relative;
+        }
+
+        a::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 101%;
+            z-index: -1;
+            transition: background-size 0.3s;
+        }
+    }
+
+    a.kontact-menu-features::before  {
+        background-image: url(/assets/img/kontact-menu-features.png);
+    }
+
+    a.kontact-menu-features:hover::before {
+        background-size: 150%;
+    }
+
+    a.kontact-menu-features {
+        min-width: 360px;
+        min-height: 150px;
+        line-height: 150px;
+        color: #334545;
+        font-size: 1.5em;
+    }
+
+    .kontact-menu-apps {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            width: 50%;
+            height: auto;
+            position: relative;
+            min-height: 100px;
+            line-height: 100px;
+            font-size: 1.3em;
+            color: #334545;
+        }
+
+        a::before {
+            background-size: 155%;
+            opacity: 0.3;
+        }
+
+        a:hover::before {
+            background-size: 65%;
+            transition: background-size 0.3s;
+        }
+    }
+
+    a.kontact-menu-apps-kmail::before {
+        background-image: url(/assets/img/icon-kmail.svg);
+    }
+    a.kontact-menu-apps-korganizer::before {
+        background-image: url(/assets/img/icon-korganizer.svg);
+    }
+    a.kontact-menu-apps-kaddressbook::before {
+        background-image: url(/assets/img/icon-kaddressbook.svg);
+    }
+    a.kontact-menu-apps-akregator::before {
+        background-image: url(/assets/img/icon-akregator.svg);
+    }
+    a.kontact-menu-apps-knotes::before {
+        background-image: url(/assets/img/icon-knotes.svg);
+    }
+    a.kontact-menu-apps-akonadi::before {
+        background-image: url(/assets/img/icon-akonadi.png);
+    }
+
+    .navbar-toggler {
+        order: 2;
+    }
+
+} /* #kHeaderNav */
+
+#KontactGlobalLogo {
+    margin: 0;
+    margin-top: -3px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    padding: 0 10px;
+    order: 1;
+}
+
+#KontactGlobalLogo > img {
+    width: 70%;
+    margin-top: -3px;
+}
+
+#kMainNavbar {
+    order: 4;
+
+    @media(min-width: 768px) {
+        order: 3;
+    }
+}
+
+#KMadeByKDE {
+    order: 3;
+    padding-right: 15px;
+
+    span {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: inline;
+        }
+    }
+
+    @media (min-width: 768px) {
+        order: 4;
+    }
+}
+
+
+#KGlobalLogo::before {
+    position: absolute;
+    top: 0;
+    width: 42px;
+    margin-left: -21px;
+    content: "K";
+    color: #4d4d4d;
+    font-family: "glyph";
+    font-size: 32px;
+    font-weight: normal;
+    text-indent: 0px;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+main.main {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 30px;
+
+    @media (min-width: 1140px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+main .block {
+    padding: 30px 20px;
+}
+
+main.navfix {
+    margin-top: 50px; /* compensate for sticky header */
+}
+
+
+
+#kWelcome {
+    font-size: 18px;
+    border-radius: 2px;
+    border: solid 1px #abdaf9;
+    background-color: #e1f2ff;
+    color: #375a7d;
+    padding: 10px 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#kFooter {
+    background-color: #eff1f1;
+    color: #7f8c8d;
+    position: relative;
+    padding-top: 12px;
+    font-size: 12px;
+    width: 100%;
+    clear: both;
+
+    a {
+        text-decoration: none;
+        color: #2980b9;
+    }
+
+    section {
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    #KSiteDonateForm {
+        background-color: #abf9c7;
+        border: solid 1px #7ceca4;
+        border-radius: 2px;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        h3 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #377d50;
+            padding: 0 0 10px;
+            margin: 0;
+
+            a {
+                font-width: normal;
+                margin-left: 20px;
+                color: #2980b9;
+            }
+
+            a::before {
+                content: "( ";
+                color: #377d50;
+            }
+
+            a::after {
+                content: " )";
+                color: #377d50;
+            }
+        }
+
+        #otherWaysDonate {
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    #KGlobalContributorLinks {
+        padding: 0 20px;
+        box-sizing: border-box;
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0.05);
+        position: relative;
+        margin: auto;
+
+        nav {
+            max-width: 1100px;
+            padding: 0;
+            line-height: 50px;
+            margin: auto;
+            font-size: 14px;
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    #KGlobalLegalInfo {
+        padding: 20px;
+
+        small {
+            font-size: 12px;
+        }
+
+        figure {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        small + small::before {
+            content: " | ";
+            color: #bdc3c7;
+            margin: 0 10px;
+        }
+    }
+
+} /* #kFotter */
+
+#kLinks {
+    padding: 30px 20px 30px 0;
+
+    nav {
+        width: 20%;
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+        font-size: 12px;
+        padding: 10px 0 10px 20px;
+
+        h3 {
+            font-size: 14px;
+            color: #95a5a6;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+    }
+
+    a {
+        display: block;
+        line-height: 150%;
+    }
+
+    a::after {
+        color: #7f8c8d;
+        position: relative;
+        content: ">";
+        font-family: "glyph";
+        vertical-align: baseline;
+        top: .1em;
+        padding-left: 10px;
+    }
+
+} /* kLinks */
+
+.konqi {
+    float: right;
+    width: 250px;
+    margin-top: -50px;
+    margin-left: 40px;
+}
+
+.icon {
+    margin-left: 20px;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 50px;
+    left: 5px;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.icon-kontact::before {
+    background-image: url(/assets/img/icon-kontact.svg);
+}
+.icon-kmail::before {
+    background-image: url(/assets/img/icon-kmail.svg);
+}
+.icon-korganizer::before {
+    background-image: url(/assets/img/icon-korganizer.svg);
+}
+.icon-kaddressbook::before {
+    background-image: url(/assets/img/icon-kaddressbook.svg);
+}
+.icon-knotes::before {
+    background-image: url(/assets/img/icon-knotes.svg)
+}
+.icon-akregator::before {
+    background-image: url(/assets/img/icon-akregator.svg)
+}
+
+.preview {
+    cursor: pointer;
+}
+
+#kImagePreview {
+    text-align: center;
+
+    img {
+        margin: auto;
+        cursor: pointer;
+        max-width: 100%;
+    }
+}
+
+#kImagePreviewContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.konsole {
+    display: block;
+    background-color: #31363b;
+    padding: 1px;
+    color: #eff0f1;
+}
+.konsole .konsole-red {
+    color: #da4453;
+}

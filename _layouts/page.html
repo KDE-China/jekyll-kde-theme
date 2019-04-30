@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<main class="navfix container" aria-label="Content">
+
+{% if page.konqi %}
+    <img src="{{ page.konqi }}" alt="Konqi, the KDE mascot" class="konqi">
+{% endif %}
+
+    {{ content }}
+
+</main>
