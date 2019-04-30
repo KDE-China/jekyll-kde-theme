@@ -7,7 +7,7 @@ This is a jekyll theme for a unified layout across the kde websites.
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "kde-jekyll-theme", , :git => 'git://invent.kde.org/carlschwan/kde-jekyll-theme'
+gem "kde-jekyll-theme", :git => 'git://invent.kde.org/carlschwan/kde-jekyll-theme'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -20,15 +20,11 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install kde-jekyll-theme
-
 ## Usage
 
 ### Collections:
 
-* Changelogs (optional): put the software changelog in _changelogs. Example metadata:
+* Changelogs (optional): put the software changelog in \_changelogs. Example metadata:
 ```
 ---
 layout: changelog
@@ -40,7 +36,7 @@ css-include: /css/main.css
 * Feature 1
 * Feature 2
 ```
-* 
+* Components (at least one): if your application contains multiple component (e.g Kontact) create a new file for each component (e.g KMail &rarr; kmail.md). Otherwise create only one component (e.g konsole.md) in \_components.
 
 ## Contributing
 
