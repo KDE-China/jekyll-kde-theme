@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["carl@carlschwan.eu"]
 
   spec.summary       = "Jekyll theme for KDE websites"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://invent.kde.org/carlschwan/kde-jekyll-theme"
   spec.license       = "AGPL"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
