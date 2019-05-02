@@ -16,7 +16,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link {% if page.url == '/' %}active{% endif %}"
-                       href="/" aria-haspopup="true" aria-expanded="false">Konsole</a>
+                       href="/" aria-haspopup="true" aria-expanded="false">{{ site.title }}</a>
                 </li>
                 {% assign sorted = site.pages | sort: "sorted" %}
                 {% for nav in sorted %}
