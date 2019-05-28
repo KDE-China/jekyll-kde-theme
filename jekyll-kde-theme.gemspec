@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "kde-jekyll-theme"
-  spec.version       = "0.1.0"
+  spec.name          = "jekyll-kde-theme"
+  spec.version       = "0.2.0"
   spec.authors       = ["Carl Schwan"]
   spec.email         = ["carl@carlschwan.eu"]
 
   spec.summary       = "Jekyll theme for KDE websites"
-  spec.homepage      = "https://invent.kde.org/carlschwan/kde-jekyll-theme"
+  spec.homepage      = "https://invent.kde.org/websites/jekyll-kde-theme"
   spec.license       = "AGPL"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|

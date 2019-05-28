@@ -3,7 +3,7 @@ sass:
   style: compressed
 
 markdown: kramdown
-theme: kde-jekyll-theme
+theme: jekyll-kde-theme
 
 defaults:
   - scope:
