@@ -8,13 +8,14 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Jekyll theme for KDE websites"
   spec.homepage      = "https://invent.kde.org/websites/jekyll-kde-theme"
-  spec.license       = "AGPL"
+  spec.license       = "AGPL-3.0-or-later"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
     f.match(%r!^(changelog|assets|_(includes|layouts|sass)/|(LICENSE|README)|((\.(txt|md|markdown)|$)))!i)
   end
 
   spec.add_runtime_dependency "jekyll", "~> 3.8"
+  spec.add_runtime_dependency "jekyll-multiple-languages-plugin", "~> 1.6"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 12.0"
