@@ -8,7 +8,7 @@
 	background: #27AE60;
 	position: relative;
 	text-indent: -9999px;
-	width: 24px;
+	width: 30px;
 	line-height: 30px;
 	padding: 0px 10px;
 	border-radius: 3px;
@@ -27,23 +27,37 @@
 	right: 0px;
 	text-align: center;
 }
-
 .kSocialLinks a.shareFacebook { background-color: #2980b9; }
 .kSocialLinks a.shareGoogle { background-color: #d35400; }
 .kSocialLinks a.shareTwitter { background-color: #3daefd; }
 .kSocialLinks a.shareForum { background-color: #0068c6; }
 .kSocialLinks a.shareTelegram { background-color: #2ca5e0; }
+.kSocialLinks a.shareReddit { background-color: #fe4500; }
+.kSocialLinks a.shareDiaspora { background-color: #313131; }
+.kSocialLinks a.shareYouTube { background-color: #f60000; }
+.kSocialLinks a.shareMastodon { background-color: #2a8cd2; }
+.kSocialLinks a.shareLinkedIn { background-color: #0077af; }
+.kSocialLinks a.sharePeerTube { background-color: #aaaaaa; }
 
 .kSocialLinks a.shareFacebook:hover { background-color: #3498db; }
 .kSocialLinks a.shareGoogle:hover { background-color: #f67400; }
 .kSocialLinks a.shareTwitter:hover { background-color: #70c3fe; }
 .kSocialLinks a.shareForum:hover { background-color: #1078d6; }
 .kSocialLinks a.shareTelegram:hover { background-color: #2ca5e0; }
+.kSocialLinks a.shareReddit:hover { background-color: #ff6432; }
+.kSocialLinks a.shareDiaspora:hover { background-color: #464646; }
+.kSocialLinks a.shareYouTube:hover { background-color: #f66565; }
+.kSocialLinks a.shareMastodon:hover { background-color: #2f9fee; }
+.kSocialLinks a.shareLinkedIn:hover { background-color: #008dce; }
+.kSocialLinks a.sharePeerTube:hover { background-color: #cccccc; }
 
 .kSocialLinks a.shareFacebook:after { content: "F"; }
 .kSocialLinks a.shareGoogle:after { content: "G"; }
 .kSocialLinks a.shareTwitter:after { content: "T"; }
 .kSocialLinks a.shareForum:after { content: "K"; }
-
-
-
+.kSocialLinks a.shareReddit:after { content: "R"; }
+.kSocialLinks a.shareDiaspora:after { content: "*"; }
+.kSocialLinks a.shareYouTube:after { content: "V"; }
+.kSocialLinks a.shareMastodon:after { content: "m"; }
+.kSocialLinks a.shareLinkedIn:after { content: "\eac9"; }
+.kSocialLinks a.sharePeerTube:after { content: "J"; }

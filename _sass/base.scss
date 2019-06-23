@@ -81,6 +81,9 @@ ul > li {
         line-height: 50px;
         padding: 0 20px;
     }
+    a.nav-link.active {
+        color: white;
+    }
 
     a:hover {
         color: #3daefd;
@@ -92,7 +95,7 @@ ul > li {
 
     a.active:hover,
     .dropdown-menu.show a.nav-link {
-        color: #334545;
+        color: #fff;
     }
 
     a:active,
