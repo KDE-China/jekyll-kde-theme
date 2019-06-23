@@ -58,7 +58,7 @@ ul > li {
 
     .navbar-toggler:before {
         position: absolute;
-        top: 0;
+        top: -6px;
         left: 50%;
         width: 42px;
         margin-left: -21px;
@@ -225,6 +225,9 @@ ul > li {
     }
 
     .navbar-toggler {
+        @media (max-width: 992px) {
+            left: -20px;
+        }
         order: 2;
     }
 
@@ -248,7 +251,7 @@ ul > li {
 #kMainNavbar {
     order: 4;
 
-    @media(min-width: 768px) {
+    @media(min-width: 992px) {
         order: 3;
     }
 }
@@ -260,12 +263,12 @@ ul > li {
     span {
         display: none;
 
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
             display: inline;
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         order: 4;
     }
 }
