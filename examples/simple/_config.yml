@@ -28,6 +28,17 @@ collections:
     output: true
 
 navigation:
+  top:
+    - title: Changelog
+      url: /changelog.html
+    - title: Download
+      url: /download.html
+    - title: User support
+      url: /users.html
+    - title: Get Involved
+      url: /get-involved.html
+    - title: Donate
+      url: https://www.kde.org/donate
   bottom:
     - name: Community
       items:
