@@ -4,6 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ site.title }}</title>
+    
+    {% if page.summary %}
+    <meta name="description" content="{{ page.summary | escape }}">
+    {% endif %}
+    {%if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
+    {%endif %}
 
     <!-- Icons -->
     <link href="/assets/aether/media/192x192.png" rel="icon" sizes="192x192" />
