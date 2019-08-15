@@ -38,6 +38,12 @@ css-include: /css/main.css
 ```
 * Components (at least one): if your application contains multiple component (e.g Kontact) create a new file for each component (e.g KMail &rarr; kmail.md). Otherwise create only one component (e.g konsole.md) in \_components.
 
+### Options
+
+Following options are available in `_config.yml`
+
+* `app_icon`: Path to the icon displayed in the navbar
+
 ## Build example
 
 ```bash
