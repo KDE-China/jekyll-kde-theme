@@ -27,6 +27,32 @@ collections:
   changelogs:
     output: true
 
+navigation:
+  top:
+    - title: Changelog
+      url: /changelog.html
+    - title: Download
+      url: /download.html
+    - title: User support
+      url: /users.html
+    - title: Get Involved
+      url: /get-involved.html
+    - title: Donate
+      url: https://www.kde.org/donate
+  bottom:
+    - name: Community
+      items:
+        - title: Konsole Forums
+          url: https://forum.kde.org/viewforum.php?f=227&sid=2e54340bf2c58589fec0f3406a4ce171
+    - name: News &amp; Press
+      items:
+        - title: Announcements
+          url: https://www.kde.org/announcements/
+        - title: KDE.news
+          url: https://dot.kde.org/
+        - title: Planet KDE
+          url: https://planetkde.org/
+
 exclude:
   - Gemfile
   - Gemfile.lock

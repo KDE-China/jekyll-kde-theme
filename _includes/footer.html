@@ -23,17 +23,31 @@
 
     <section id="kLinks">
         <div class="row">
-            <nav class="col-sm">
-                <h3>Community</h3>
-                <a href="https://forum.kde.org">Forums</a>
-            </nav>
+            {% if site.navigation.bottom %}
+                {% for section in site.navigation.bottom %}
+                    <nav class="col-sm">
+                        <h3>{{ section.name }}</h3>
+                        {% for item in section.items %}
+                            <a href="{{ item.url }}">{{ item.title }}</a>
+                        {% endfor %}
+                    </nav>
+                {% endfor %}
+            {% else %}
+                {% comment %}
+                    Default bottom navigation
+                {% endcomment %}
+                <nav class="col-sm">
+                    <h3>Community</h3>
+                    <a href="https://forum.kde.org">Forums</a>
+                </nav>
 
-            <nav class="col-sm">
-                <h3>News &amp; Press</h3>
-                <a href="https://www.kde.org/announcements/">Announcements</a>
-                <a href="https://dot.kde.org/">KDE.news</a>
-                <a href="https://planetkde.org/">Planet KDE</a>
-            </nav>
+                <nav class="col-sm">
+                    <h3>News &amp; Press</h3>
+                    <a href="https://www.kde.org/announcements/">Announcements</a>
+                    <a href="https://dot.kde.org/">KDE.news</a>
+                    <a href="https://planetkde.org/">Planet KDE</a>
+                </nav>
+            {% endif %}
         </div>
     </section>
 
