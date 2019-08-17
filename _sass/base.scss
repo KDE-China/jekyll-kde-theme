@@ -550,3 +550,20 @@ main.navfix {
     height: 48px;
     width: auto;
 }
+
+.announcement-feed {
+    h3 {
+        font-size: inherit;
+        font-weight: bold;
+        i {
+            color: #b0b8b8;
+            font-size: 90%;
+            font-weight: normal;
+            padding-left: 5px;
+        }
+    }
+
+    q {
+        diplay: block;
+    }
+}

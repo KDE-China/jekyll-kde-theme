@@ -20,3 +20,6 @@ exclude:
   - Gemfile.lock
   - vendor
 
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
