@@ -43,6 +43,34 @@ css-include: /css/main.css
 Following options are available in `_config.yml`
 
 * `app_icon`: Path to the icon displayed in the navbar
+* `navigation`: Navigation menu settings
+  * `navigation.top[].title`: Title for the top navigation menu item
+  * `navigation.top[].url`: URL for the top navigation menu item
+  * `navigation.bottom[].name`: Section title for the bottom links
+    * `navigation.bottom[].items[].title`: Title for the bottom links
+    * `navigation.bottom[].items[].url`: URL for the bottom links
+
+`navigation` option example:
+
+```yaml
+navigation:
+  top:
+    - title: Changelog
+      url: /changelog.html
+    - title: Download
+      url: /download.html
+  bottom:
+    - name: Community
+      items:
+        - title: Konsole Forums
+          url: https://forum.kde.org/viewforum.php?f=227&sid=2e54340bf2c58589fec0f3406a4ce171
+    - name: News &amp; Press
+      items:
+        - title: Announcements
+          url: https://www.kde.org/announcements/
+        - title: KDE.news
+          url: https://dot.kde.org/
+```
 
 ## Build example
 
