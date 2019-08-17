@@ -36,7 +36,6 @@ css-include: /css/main.css
 * Feature 1
 * Feature 2
 ```
-* Components (at least one): if your application contains multiple component (e.g Kontact) create a new file for each component (e.g KMail &rarr; kmail.md). Otherwise create only one component (e.g konsole.md) in \_components.
 
 ### Options
 
