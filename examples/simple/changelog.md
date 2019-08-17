@@ -4,8 +4,8 @@ title: Changelog
 css-include: /css/main.css
 sorted: 2
 ---
-{% assign sorted = (site.changelogs | sort: 'sorted') %}
-{% assign reverse = (sorted | reverse) %}
+{% assign sorted = site.changelogs | sort:'sorted' %}
+{% assign reverse = sorted | reverse %}
 
 {% if changelogs.size == 0 %}
     No changelog available.
