@@ -53,6 +53,8 @@ navigation:
         - title: Planet KDE
           url: https://planetkde.org/
 
+paginate: 3
+
 exclude:
   - Gemfile
   - Gemfile.lock
