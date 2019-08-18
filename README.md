@@ -37,6 +37,20 @@ css-include: /css/main.css
 * Feature 2
 ```
 
+
+### Blog
+
+In `_config.yml`, put
+```
+paginate: 3
+```
+
+And in the `index.html` page, you can include the blog component.
+
+```
+{% include blog.html %}
+```
+
 ### Options
 
 Following options are available in `_config.yml`
