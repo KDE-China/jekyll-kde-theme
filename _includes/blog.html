@@ -1,17 +1,19 @@
 <div class="announcement-feed mb-3">
-    <h2>Announcements</h2>
+    <h2>{% if site.announcements %}{{site.announcements}}{% else %}Announcements{% endif %}</h2>
     {% for post in paginator.posts %}
+    <div class="mb-4">
         <h3>{{ post.title }}<i>{{ post.date | date_to_string }}</i></h3>
         <q>{{ post.excerpt | strip_html | truncatewords:30 }}</q>
-        <a href="{{ post.url }}" class="learn-more">Read full announcement</a>
+        <a href="{{ post.url }}" class="learn-more">{% if site.read_full %}{{ site.read_full }}{% else %}Read full announcement{% endif %}</a>
+    </div>
     {% endfor %}
 
     {% if paginator.total_pages > 1 %}
         <div class="pagination justify-content-center mt-3">
             {% if paginator.previous_page %}
-                <a class="ml-1 mr-1" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+                <a class="ml-1 mr-1" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; {% if site.prev %}{{site.prev}}{% else %}Prev{% endif %}</a>
             {% else %}
-                <span>&laquo; Prev</span>
+            <span>&laquo; {% if site.prev %}{{site.prev}}{% else %}Prev{% endif %}</span>
             {% endif %}
 
             {% for page in (1..paginator.total_pages) %}
@@ -25,9 +27,9 @@
             {% endfor %}
 
             {% if paginator.next_page %}
-                <a class="ml-1 mr-1" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+                <a class="ml-1 mr-1" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% if site.next %}{{site.next}}{% else %}Next{% endif %} &raquo;</a>
             {% else %}
-                <span>Next &raquo;</span>
+            <span>{% if site.next %}{{site.next}}{% else %}Next{% endif %} &raquo;</span>
             {% endif %}
         </div>
         {% endif %}

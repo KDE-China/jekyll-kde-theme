@@ -23,3 +23,12 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-feed
+
+read_full: "Read full announcement"
+announcements: "Announcements"
+prev: "Prev"
+next: "Next"
+donate_to_kde: "Donate to KDE"
+donate_via_paypal: "Donate via PayPal"
+why_donate: "Why Donate?"
+other_whay_to_donate: "Other ways to donate"
