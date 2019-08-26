@@ -4,21 +4,31 @@ This is a jekyll theme for a unified layout across the kde websites.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+To create a new website, copy the directory `examples/simple`
+
+And repace
 
 ```ruby
-gem "jekyll-kde-theme", :git => 'https://invent.kde.org/websites/jekyll-kde-theme.git'
+gem "jekyll-kde-theme", path: '../../'
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+by
 
-```yaml
-theme: jekyll-kde-theme
+```ruby
+gem "jekyll-kde-theme"
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install --path vendor/bundle
+    
+You can now start editing the website.
+
+To test your change do:
+
+    $ bundle exec jekyll server
+    
+You can also find a tutorial in the community wiki: https://community.kde.org/KDE.org/Jekyll
 
 ## Usage
 
