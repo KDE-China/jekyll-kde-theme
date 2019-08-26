@@ -28,7 +28,18 @@
                 {% endif %}
 
                 {% for nav in sorted %}
-                  {% if nav.title and (nav.title != "Changelog" or (site.changelogs | size) != 0) %}
+                  {% if nav.subnav %}
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbar{{nav.title|slugify}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ nav.title }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbar{{nav.title|slugify}}">
+                        {% for subnav in nav.subnav %}
+                            <a class="dropdown-item" href="{{ subnav.url }}">{{ subnav.title }}</a>
+                        {% endfor %}
+                    </div>
+                  </li>
+                  {% elsif nav.title and (nav.title != "Changelog" or (site.changelogs | size) != 0) %}
                   <li class="nav-item">
                       <a class="nav-link {% if page.url == nav.url %}active{% endif %}" href="{{ nav.url }}">{{ nav.title }}</a>
                   </li>
