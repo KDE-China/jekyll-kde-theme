@@ -16,15 +16,28 @@
             <span>&laquo; {% if site.prev %}{{site.prev}}{% else %}Prev{% endif %}</span>
             {% endif %}
 
-            {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                    <span class="ml-1 mr-1">{{ page }}</span>
-                {% elsif page == 1 %}
-                    <a class="ml-1 mr-1" href="/">{{ page }}</a>
-                {% else %}
-                    <a class="ml-1 mr-1" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                {% endif %}
-            {% endfor %}
+            {% if paginator.total_pages > 20 %}
+                {% for page in (1..paginator.total_pages) %}
+                    {% assign relative_to_current = paginator.page | minus: page | replace: '-', '' | divided_by: 1 %}
+                    {% if page == paginator.page %}
+                        <span class="ml-1 mr-1">{{ page }}</span>
+                    {% elsif relative_to_current < 5 and page == 1 %}
+                        <a class="ml-1 mr-1" href="/">{{ page }}</a>
+                    {% elsif relative_to_current < 5 %}
+                        <a class="ml-1 mr-1" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                        <span class="ml-1 mr-1">{{ page }}</span>
+                    {% elsif page == 1 %}
+                        <a class="ml-1 mr-1" href="/">{{ page }}</a>
+                    {% else %}
+                        <a class="ml-1 mr-1" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
 
             {% if paginator.next_page %}
                 <a class="ml-1 mr-1" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% if site.next %}{{site.next}}{% else %}Next{% endif %} &raquo;</a>
